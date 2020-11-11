@@ -6,8 +6,9 @@ const Protected = ({ history }) => {
     useEffect(
         () => {
             Auth.currentAuthenticatedUser()
+                .then(() => console.log('User is authenticated ! ! !'))
                 .catch((e) => {
-                    console.log(e);
+                    console.error(e);
                     history.push('/profile');
                 })
         }

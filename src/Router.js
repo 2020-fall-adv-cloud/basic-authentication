@@ -68,6 +68,10 @@ const Router = () => {
                 <Route 
                     component={Public}
                 />
+                <Route
+                    exact path="/cat"
+                    component={Public}
+                />
             </Switch>
         </HashRouter>
     );
